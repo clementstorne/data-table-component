@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply no-underline text-white;
+}
+
+input:focus,
+button:focus,
+select:focus {
+  @apply outline-none border-none;
+}
+
+/* .pagination {
+  font-weight: bold;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.navigation {
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: rgb(255 255 255);
+  cursor: pointer;
+} */
