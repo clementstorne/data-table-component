@@ -32,7 +32,11 @@ export default function DataTableFilter({ onChangeOfFilter }) {
 
   return (
     <div>
-      <label htmlFor="filter" id="filter-label" className="font-semibold mr-1">
+      <label
+        htmlFor="filter"
+        id="filter-label"
+        className="filter-label font-semibold mr-1"
+      >
         Search:
       </label>
       <input
@@ -40,7 +44,7 @@ export default function DataTableFilter({ onChangeOfFilter }) {
         id="filter"
         aria-describedby="filter-label"
         spellCheck="false"
-        className="px-3 py-1 rounded-md bg-white shadow hover:shadow-md focus:shadow-md"
+        className="filter-input px-3 py-1 rounded-md bg-white shadow hover:shadow-md focus:shadow-md"
         value={filter}
         onChange={handleChange}
       />

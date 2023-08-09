@@ -12,13 +12,116 @@ select:focus {
   @apply outline-none border-none;
 }
 
-/* .pagination {
+/* .data-table-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.data-table {
+  width: 100%;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  table-layout: auto;
+  border-collapse: collapse;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.number-of-entries-label {
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.number-of-entries-select {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-radius: 0.375rem;
+  background-color: white;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.number-of-entries-select:hover,
+.number-of-entries-select:focus {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.8);
+}
+
+.filter-label {
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.filter-input {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-radius: 0.375rem;
+  background-color: white;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.filter-input:hover,
+.filter-input:focus {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.8);
+}
+
+.data-table-row-header {
+  border: 1px solid black;
+  background-color: #446404;
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.sort-order {
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+.one-column {
+  text-align: center;
+}
+
+.data-table-row {
+  border: 1px solid black;
+}
+
+.data-table-row:hover {
+  background-color: #687f11;
+}
+
+.data-table-row-cell {
+  border: 1px solid black;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: #eef1e6;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #94ac1b;
+}
+
+.data-table-pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-table-pagination-label {
   font-weight: bold;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
 
-.navigation {
+.data-table-navigation {
   padding: 0.5rem;
   border-radius: 50%;
   background-color: rgb(255 255 255);

@@ -18,7 +18,7 @@ export default function DataTablePagination({
   totalEntries,
 }) {
   return (
-    <div className="pagination font-bold mx-3">
+    <div className="data-table-pagination-label font-bold mx-3">
       {totalEntries === 0
         ? "0 of 0"
         : `${firstEntryOfPage}-

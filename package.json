@@ -1,6 +1,6 @@
 {
   "name": "data-table-component",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "The DataTable component is a reusable React component that provides functionality for displaying tabular data in a paginated and sortable manner. It allows users to specify the number of entries displayed per page, apply filters to the data, and sort the data based on column headers.",
   "license": "MIT",
   "author": "Clément STORNE",
@@ -11,7 +11,7 @@
     "table pagination"
   ],
   "files": [
-    "dist",
+    "/dist",
     "README.md"
   ],
   "main": "./dist/data-table-component.umd.js",
@@ -69,10 +69,12 @@
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
     "tailwindcss": "^3.3.3",
-    "vite": "^4.4.8",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.5.1",
     "vitest": "^0.34.1"
   },
   "dependencies": {
-    "react-icons": "^4.10.1"
+    "react-icons": "^4.10.1",
+    "tailwindcss": "^3.3.3"
   }
 }

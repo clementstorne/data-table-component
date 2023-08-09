@@ -45,7 +45,7 @@ export default function DataTableHeaderRow({
         {columns.map((column) => {
           return (
             <th
-              className={`border border-black bg-[${color}] text-white py-2 cursor-pointer`}
+              className={`data-table-row-header border border-black bg-[${color}] text-white py-2 cursor-pointer`}
               id={column.selector}
               key={column.selector}
               onClick={handleClick}
@@ -53,9 +53,9 @@ export default function DataTableHeaderRow({
               {column.name}
               {column.selector === selectedKey ? (
                 sortDirection === "ascending" ? (
-                  <BsFillCaretUpFill className="inline-block ml-1" />
+                  <BsFillCaretUpFill className="sort-order inline-block ml-1" />
                 ) : (
-                  <BsFillCaretDownFill className="inline-block ml-1" />
+                  <BsFillCaretDownFill className="sort-order inline-block ml-1" />
                 )
               ) : (
                 ""

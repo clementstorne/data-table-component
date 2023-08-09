@@ -27,7 +27,7 @@ export default function DataTableNavigationPrevious({ onClick }) {
 
   return (
     <button
-      className="navigation p-2 rounded-full bg-white cursor-pointer shadow hover:shadow-md"
+      className="data-table-navigation p-2 rounded-full bg-white cursor-pointer shadow hover:shadow-md"
       onClick={handleClick}
     >
       <BsFillCaretLeftFill />

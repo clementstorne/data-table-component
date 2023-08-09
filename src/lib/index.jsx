@@ -129,14 +129,14 @@ export default function DataTable({
 
   return (
     <>
-      <div className="flex flex-row flex-nowrap justify-between">
+      <div className="data-table-container flex flex-row flex-nowrap justify-between">
         <DataTableNumberOfEntries
           options={numberOfEntriesOptions}
           onNumberOfEntriesChange={handleNumberOfEntriesChange}
         />
         <DataTableFilter onChangeOfFilter={handleChangeOfFilter} />
       </div>
-      <table className="w-full my-3 table-auto border-collapse border border-black text-center">
+      <table className="data-table w-full my-3 table-auto border-collapse border border-black text-center">
         <DataTableHeaderRow
           columns={columns}
           onChangeOfSort={handleSort}
@@ -145,7 +145,7 @@ export default function DataTable({
         />
         <tbody>
           {entriesToShow.length === 0 ? (
-            <td colSpan={columns.length} className="text-center">
+            <td colSpan={columns.length} className="one-column text-center">
               No data available in table
             </td>
           ) : (
@@ -167,7 +167,7 @@ export default function DataTable({
           )}
         </tbody>
       </table>
-      <div className="flex flex-row flex-nowrap justify-center items-center">
+      <div className="data-table-pagination flex flex-row flex-nowrap justify-center items-center">
         <DataTableNavigationPrevious onClick={handleClickPrevious} />
         <DataTablePagination
           numberOfEntriesPerPage={numberOfEntries}

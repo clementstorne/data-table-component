@@ -16,10 +16,15 @@ import PropTypes from "prop-types";
 
 export default function DataTableRow({ data, columns, rowColors, hoverColor }) {
   return (
-    <tr className={`border border-black hover:${hoverColor} ${rowColors}`}>
+    <tr
+      className={`data-table-row border border-black hover:${hoverColor} ${rowColors}`}
+    >
       {columns.map((column) => {
         return (
-          <td className="border border-black py-2" key={column.selector}>
+          <td
+            className="data-table-row-cell border border-black py-2"
+            key={column.selector}
+          >
             {data[column.selector]}
           </td>
         );

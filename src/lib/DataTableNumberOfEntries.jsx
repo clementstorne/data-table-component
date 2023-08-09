@@ -39,14 +39,14 @@ export default function DataTableNumberOfEntries({
       <label
         htmlFor="entries"
         id="entries-label"
-        className="font-semibold mr-1"
+        className="number-of-entries-label font-semibold mr-1"
       >
         Rows per page:
       </label>
       <select
         name="entries"
         id="entries"
-        className="px-3 py-1 rounded-md bg-white shadow hover:shadow-md"
+        className="number-of-entries-select px-3 py-1 rounded-md bg-white shadow hover:shadow-md"
         aria-describedby="entries-label"
         value={numberOfEntries}
         onChange={handleChange}
