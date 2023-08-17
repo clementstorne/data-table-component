@@ -35,6 +35,7 @@ export default function DataTableFilter({ onChangeOfFilter }) {
       <label
         htmlFor="filter"
         id="filter-label"
+        data-testid="filter-label"
         className="filter-label font-semibold mr-1"
       >
         Search:
@@ -42,6 +43,7 @@ export default function DataTableFilter({ onChangeOfFilter }) {
       <input
         type="text"
         id="filter"
+        data-testid="filter"
         aria-describedby="filter-label"
         spellCheck="false"
         className="filter-input px-3 py-1 rounded-md bg-white shadow hover:shadow-md focus:shadow-md"

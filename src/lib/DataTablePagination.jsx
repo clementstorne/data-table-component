@@ -17,16 +17,26 @@ export default function DataTablePagination({
   firstEntryOfPage,
   totalEntries,
 }) {
+  let content;
+
+  if (firstEntryOfPage > totalEntries) {
+    content = "Invalid range";
+  } else if (totalEntries === 0) {
+    content = "0 of 0";
+  } else {
+    const lastEntry = Math.min(
+      firstEntryOfPage + numberOfEntriesPerPage - 1,
+      totalEntries
+    );
+    content = `${firstEntryOfPage}-${lastEntry} of ${totalEntries}`;
+  }
+
   return (
-    <div className="data-table-pagination-label font-bold mx-3">
-      {totalEntries === 0
-        ? "0 of 0"
-        : `${firstEntryOfPage}-
-      ${
-        firstEntryOfPage + numberOfEntriesPerPage - 1 <= totalEntries
-          ? firstEntryOfPage + numberOfEntriesPerPage - 1
-          : totalEntries
-      } of ${totalEntries}`}
+    <div
+      data-testid="data-table-pagination-label"
+      className="data-table-pagination-label font-bold mx-3"
+    >
+      {content}
     </div>
   );
 }

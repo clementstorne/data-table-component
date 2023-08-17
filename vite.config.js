@@ -1,26 +1,27 @@
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import dts from "vite-plugin-dts";
 
 export default defineConfig({
   build: {
+    cssCodeSplit: false,
     lib: {
       entry: path.resolve(__dirname, "src/lib/index.jsx"),
-      name: "data-table-component",
-      fileName: (format) => `index.${format}.js`,
+      name: "Data Table Component",
+      fileName: (format) => `data-table-component.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
       output: {
         globals: {
           react: "React",
-          "react-dom": "ReactDOM",
         },
       },
     },
-    sourcemap: true,
-    emptyOutDir: true,
   },
-  plugins: [react(), dts()],
+  test: {
+    globals: true,
+    environment: "jsdom",
+  },
+  plugins: [react()],
 });

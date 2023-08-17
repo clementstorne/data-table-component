@@ -39,6 +39,7 @@ export default function DataTableNumberOfEntries({
       <label
         htmlFor="entries"
         id="entries-label"
+        data-testid="entries-label"
         className="number-of-entries-label font-semibold mr-1"
       >
         Rows per page:
@@ -46,6 +47,7 @@ export default function DataTableNumberOfEntries({
       <select
         name="entries"
         id="entries"
+        data-testid="entries"
         className="number-of-entries-select px-3 py-1 rounded-md bg-white shadow hover:shadow-md"
         aria-describedby="entries-label"
         value={numberOfEntries}

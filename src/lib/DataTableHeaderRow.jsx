@@ -53,9 +53,15 @@ export default function DataTableHeaderRow({
               {column.name}
               {column.selector === selectedKey ? (
                 sortDirection === "ascending" ? (
-                  <BsFillCaretUpFill className="sort-order inline-block ml-1" />
+                  <BsFillCaretUpFill
+                    className="sort-order inline-block ml-1"
+                    data-testid="sort-icon-ascending"
+                  />
                 ) : (
-                  <BsFillCaretDownFill className="sort-order inline-block ml-1" />
+                  <BsFillCaretDownFill
+                    className="sort-order inline-block ml-1"
+                    data-testid="sort-icon-descending"
+                  />
                 )
               ) : (
                 ""

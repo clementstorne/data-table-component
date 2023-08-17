@@ -18,11 +18,13 @@ export default function DataTableRow({ data, columns, rowColors, hoverColor }) {
   return (
     <tr
       className={`data-table-row border border-black hover:${hoverColor} ${rowColors}`}
+      data-testid="data-table-row"
     >
       {columns.map((column) => {
         return (
           <td
             className="data-table-row-cell border border-black py-2"
+            data-testid="data-table-row-cell"
             key={column.selector}
           >
             {data[column.selector]}
@@ -48,10 +50,10 @@ DataTableRow.propTypes = {
   /**
    * A string specifying the CSS classes for custom row colors.
    */
-  rowColors: PropTypes.string.isRequired,
+  rowColors: PropTypes.string,
 
   /**
    * A string specifying the CSS class for the row's hover color.
    */
-  hoverColor: PropTypes.string.isRequired,
+  hoverColor: PropTypes.string,
 };

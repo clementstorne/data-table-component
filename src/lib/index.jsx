@@ -87,18 +87,15 @@ export default function DataTable({
 
   useEffect(() => {
     const sortedData = () => {
-      if (sortConfig.key) {
-        return [...data].sort((a, b) => {
-          if (a[sortConfig.key] < b[sortConfig.key]) {
-            return sortConfig.direction === "ascending" ? -1 : 1;
-          }
-          if (a[sortConfig.key] > b[sortConfig.key]) {
-            return sortConfig.direction === "ascending" ? 1 : -1;
-          }
-          return 0;
-        });
-      }
-      return data;
+      return [...data].sort((a, b) => {
+        if (a[sortConfig.key] < b[sortConfig.key]) {
+          return sortConfig.direction === "ascending" ? -1 : 1;
+        }
+        if (a[sortConfig.key] > b[sortConfig.key]) {
+          return sortConfig.direction === "ascending" ? 1 : -1;
+        }
+        return 0;
+      });
     };
 
     const sortedDataArray = sortedData();
@@ -129,14 +126,20 @@ export default function DataTable({
 
   return (
     <>
-      <div className="data-table-container flex flex-row flex-nowrap justify-between">
+      <div
+        className="data-table-container flex flex-row flex-nowrap justify-between"
+        data-testid="data-table-container"
+      >
         <DataTableNumberOfEntries
           options={numberOfEntriesOptions}
           onNumberOfEntriesChange={handleNumberOfEntriesChange}
         />
         <DataTableFilter onChangeOfFilter={handleChangeOfFilter} />
       </div>
-      <table className="data-table w-full my-3 table-auto border-collapse border border-black text-center">
+      <table
+        className="data-table w-full my-3 table-auto border-collapse border border-black text-center"
+        data-testid="data-table"
+      >
         <DataTableHeaderRow
           columns={columns}
           onChangeOfSort={handleSort}
@@ -172,11 +175,7 @@ export default function DataTable({
         <DataTablePagination
           numberOfEntriesPerPage={numberOfEntries}
           firstEntryOfPage={firstEntry + 1}
-          totalEntries={
-            filteredData.length <= data.length
-              ? filteredData.length
-              : data.length
-          }
+          totalEntries={Math.min(filteredData.length, data.length)}
         />
         <DataTableNavigationNext onClick={handleClickNext} />
       </div>
