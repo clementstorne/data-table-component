@@ -13,11 +13,24 @@
  * @returns {JSX.Element} The DataTableRow component.
  */
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 export default function DataTableRow({ data, columns, rowColors, hoverColor }) {
+  const [isHover, setIsHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
+
   return (
     <tr
-      className={`data-table-row border border-black hover:${hoverColor} ${rowColors}`}
+      className={`data-table-row border border-black hover:${hoverColor}`}
+      style={{ backgroundColor: isHover ? hoverColor : rowColors }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       data-testid="data-table-row"
     >
       {columns.map((column) => {

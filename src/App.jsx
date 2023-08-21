@@ -245,7 +245,16 @@ const App = () => {
     },
   ];
 
-  return <DataTable columns={columns} data={data} />;
+  return (
+    <DataTable
+      columns={columns}
+      data={data}
+      headerColor={"#123456"}
+      rowColor={"#456789"}
+      alternateRowColor={"#789ABC"}
+      hoverRowColor={"#ABCDEF"}
+    />
+  );
 };
 
 export default App;

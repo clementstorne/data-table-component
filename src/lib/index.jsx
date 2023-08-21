@@ -158,11 +158,7 @@ export default function DataTable({
                   data={row}
                   columns={columns}
                   key={row.id}
-                  rowColors={
-                    index % 2 === 0
-                      ? `bg-[${rowColor}]`
-                      : `bg-[${alternateRowColor}]`
-                  }
+                  rowColors={index % 2 === 0 ? rowColor : alternateRowColor}
                   hoverColor={hoverRowColor}
                 />
               );
