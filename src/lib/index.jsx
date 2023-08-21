@@ -8,7 +8,7 @@
  * @param {Object} props - The component props.
  * @param {Array} props.columns - An array of column objects representing the configuration of the columns in the DataTable.
  * @param {Array} props.data - An array of data objects to be displayed in the table.
- * @param {string} [props.headerColor="#446404"] - The header row color of the DataTable.
+ * @param {string} [props.headerColor="#444444"] - The header row color of the DataTable.
  * @param {string} [props.rowColor="#eef1e6"] - The primary row color of the DataTable.
  * @param {string} [props.alternateRowColor="#94ac1b"] - The alternate row color of the DataTable.
  * @param {string} [props.hoverRowColor="#687f11"] - The hover row color of the DataTable.
@@ -217,8 +217,8 @@ DataTable.propTypes = {
  * Default props for the DataTable component.
  */
 DataTable.defaultProps = {
-  headerColor: "#446404",
-  rowColor: "#eef1e6",
-  alternateRowColor: "#94ac1b",
-  hoverRowColor: "#687f11",
+  headerColor: "#444444",
+  rowColor: "#b0b0b0",
+  alternateRowColor: "#e7e7e7",
+  hoverRowColor: "#6d6d6d",
 };

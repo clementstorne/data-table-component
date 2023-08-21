@@ -4,6 +4,12 @@
 
 A customizable React component that renders a data table with sorting, filtering, and pagination features. This component allows you to display provided data using specified columns while providing options to customize colors for various elements.
 
+## Dependencies
+
+- node v.19.7.0
+- react-icons: ^4.10.1
+- tailwindcss: ^3.3.3
+
 ## Installation and Usage
 
 To use the `DataTable` component in your React application, follow these steps:

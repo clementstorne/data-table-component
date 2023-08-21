@@ -249,10 +249,10 @@ const App = () => {
     <DataTable
       columns={columns}
       data={data}
-      headerColor={"#123456"}
-      rowColor={"#456789"}
-      alternateRowColor={"#789ABC"}
-      hoverRowColor={"#ABCDEF"}
+      // headerColor={"#123456"}
+      // rowColor={"#456789"}
+      // alternateRowColor={"#789ABC"}
+      // hoverRowColor={"#ABCDEF"}
     />
   );
 };
