@@ -45,6 +45,7 @@ export default function DataTable({
 
   const handleNumberOfEntriesChange = (number) => {
     setNumberOfEntries(parseInt(number));
+    setFirstEntry(0);
   };
 
   const handleClickPrevious = () => {
