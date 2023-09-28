@@ -101,20 +101,12 @@ export default function DataTable({
 
     const sortedDataArray = sortedData();
 
-    const filterFirstName = () => {
-      return sortedDataArray.filter((item) => {
-        return item.firstName.toLowerCase().includes(filter.toLowerCase());
-      });
-    };
-
-    const filterLastName = () => {
-      return sortedDataArray.filter((item) => {
-        return item.lastName.toLowerCase().includes(filter.toLowerCase());
-      });
-    };
-
     const filterGlobal = () => {
-      const result = filterFirstName().concat(filterLastName());
+      const result = sortedDataArray.filter(
+        (item) =>
+          item.firstName.toLowerCase().includes(filter.toLowerCase()) ||
+          item.lastName.toLowerCase().includes(filter.toLowerCase())
+      );
       return [...new Set(result)];
     };
 
